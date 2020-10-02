@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9EC9B03E2523790A00D614F3 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B03D2523790A00D614F3 /* Refeicao.swift */; };
 		9EC9B0402523792800D614F3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B03F2523792800D614F3 /* Item.swift */; };
+		9ED914A0252792A900F86B62 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9149F252792A900F86B62 /* RefeicoesTableViewController.swift */; };
 		9EE7923A251A30CE00EE8B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE79239251A30CE00EE8B99 /* AppDelegate.swift */; };
 		9EE7923C251A30CF00EE8B99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE7923B251A30CF00EE8B99 /* SceneDelegate.swift */; };
 		9EE7923E251A30CF00EE8B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE7923D251A30CF00EE8B99 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		9EC9B03D2523790A00D614F3 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		9EC9B03F2523792800D614F3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9ED9149F252792A900F86B62 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		9EE79236251A30CE00EE8B99 /* eggplant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eggplant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE79239251A30CE00EE8B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE7923B251A30CF00EE8B99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				9EE7923D251A30CF00EE8B99 /* ViewController.swift */,
+				9ED9149F252792A900F86B62 /* RefeicoesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				9EC9B0402523792800D614F3 /* Item.swift in Sources */,
 				9EE7923E251A30CF00EE8B99 /* ViewController.swift in Sources */,
 				9EE7923A251A30CE00EE8B99 /* AppDelegate.swift in Sources */,
+				9ED914A0252792A900F86B62 /* RefeicoesTableViewController.swift in Sources */,
 				9EE7923C251A30CF00EE8B99 /* SceneDelegate.swift in Sources */,
 				9EC9B03E2523790A00D614F3 /* Refeicao.swift in Sources */,
 			);
