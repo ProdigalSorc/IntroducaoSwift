@@ -12,7 +12,7 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
     var delegate: AdicionaRefeicaoDelegate?
     @IBOutlet var nomeTextField: UITextField?
@@ -26,6 +26,16 @@ class ViewController: UIViewController {
                 navigationController?.popViewController(animated: true)
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
+        celula.textLabel?.text = "teste"
+        return celula
     }
 }
 
