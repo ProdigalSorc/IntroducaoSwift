@@ -13,5 +13,8 @@ class AdicionarItensViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    @IBAction func adicionarItem(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
