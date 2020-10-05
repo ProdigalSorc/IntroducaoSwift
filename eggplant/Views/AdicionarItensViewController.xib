@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdicionarItensViewController" customModule="eggplant" customModuleProvider="target">
             <connections>
+                <outlet property="labelCalorias" destination="EcZ-kQ-diF" id="JJw-o1-qJU"/>
+                <outlet property="labelNome" destination="Qy0-3o-pjn" id="XOc-v9-qoh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
