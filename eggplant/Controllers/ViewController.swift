@@ -15,13 +15,18 @@ protocol AdicionaRefeicaoDelegate {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var delegate: AdicionaRefeicaoDelegate?
+    var itens:[Item] = [Item(nome: "Molho de Tomate", calorias: 40),
+                        Item(nome: "Queijo", calorias: 30),
+                        Item(nome: "Molho apimentado", calorias: 50),
+                        Item(nome: "Manjericao", calorias: 55)]
+    var itensSelecionados: [Item] = []
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet var felicidadeTextField: UITextField?
     
     @IBAction func adicionar() {
         if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text {
             if let felicidade = Int(felicidadeDaRefeicao) {
-                let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
+                let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
                 delegate?.add(refeicao)
                 navigationController?.popViewController(animated: true)
             }
@@ -29,12 +34,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
-        celula.textLabel?.text = "teste"
+        let item = itens[indexPath.row]
+        celula.textLabel?.text = item.nome
         return celula
     }
     
@@ -44,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         if celula.accessoryType == .none {
             celula.accessoryType = .checkmark
+            itensSelecionados.append(itens[indexPath.row])
         } else {
             celula.accessoryType = .none
         }
