@@ -12,7 +12,8 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionaItensDelegate {
+
     
     var delegate: AdicionaRefeicaoDelegate?
     var itens:[Item] = [Item(nome: "Molho de Tomate", calorias: 40),
@@ -22,6 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var itensSelecionados: [Item] = []
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet var felicidadeTextField: UITextField?
+    @IBOutlet weak var itensTableView: UITableView!
     
     override func viewDidLoad() {
         let botaoAdicionaItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(adicionarItem))
@@ -29,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func adicionarItem() {
-        let adicionarItensViewController = AdicionarItensViewController()
+        let adicionarItensViewController = AdicionarItensViewController(self)
         navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
     
@@ -41,6 +43,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 navigationController?.popViewController(animated: true)
             }
         }
+    }
+    
+    func add(_ item: Item) {
+        itens.append(item)
+        itensTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -160,6 +160,7 @@
                     <navigationItem key="navigationItem" id="fSP-16-WKL"/>
                     <connections>
                         <outlet property="felicidadeTextField" destination="mO8-AP-Uex" id="Q1L-Ma-Far"/>
+                        <outlet property="itensTableView" destination="Tbr-Ba-bGZ" id="bNd-cE-8Cz"/>
                         <outlet property="nomeTextField" destination="T95-e3-xnv" id="S0X-VQ-mQu"/>
                     </connections>
                 </viewController>
