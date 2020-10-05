@@ -11,7 +11,7 @@ import UIKit
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4),
                      Refeicao(nome: "Pizza", felicidade: 5),
-                     Refeicao(nome: "Comida Japonesa", felicidade: 1),]
+                     Refeicao(nome: "Comida Japonesa", felicidade: 1)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
