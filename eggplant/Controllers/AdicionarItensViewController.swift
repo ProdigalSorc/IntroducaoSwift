@@ -33,6 +33,7 @@ class AdicionarItensViewController: UIViewController {
     
     @IBAction func adicionarItem(_ sender: Any) {
         guard let nome = labelNome.text, let calorias = labelCalorias.text, let numeroCalorias = Double(calorias) else {
+            Alerta(controller: self).exibe(mensagem: "Erro ao ler campo nome")
             return
         }
         
