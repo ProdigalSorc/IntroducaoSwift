@@ -14,8 +14,9 @@ class Alerta {
     init(controller: UIViewController) {
         self.controller = controller
     }
-    func exibe() {
-        let alerta = UIAlertController(title: "Erro", message: "Erro ao atualizar a tabela", preferredStyle: .alert)
+    
+    func exibe(titulo: String = "Atenção", mensagem: String) {
+        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alerta.addAction(ok)
         controller.present(alerta, animated: true, completion: nil)
