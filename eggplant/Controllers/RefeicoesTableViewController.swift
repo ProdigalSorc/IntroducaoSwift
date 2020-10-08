@@ -9,12 +9,23 @@
 import UIKit
 
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
-    var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4),
-                     Refeicao(nome: "Pizza", felicidade: 5),
-                     Refeicao(nome: "Comida Japonesa", felicidade: 1)]
+    var refeicoes: [Refeicao] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        let caminho = diretorio.appendingPathComponent("refeicao")
+        do {
+            let dados = try Data(contentsOf: caminho)
+
+            guard let refeicoesSalvas = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? [Refeicao] else {
+                return
+            }
+            refeicoes = refeicoesSalvas
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
