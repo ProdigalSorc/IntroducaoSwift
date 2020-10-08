@@ -52,6 +52,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             Alerta(controller: self).exibe(mensagem: "Não foi possível atualizar a tabela")
         }
+        do {
+            let dados = try NSKeyedArchiver.archivedData(withRootObject: itens, requiringSecureCoding: false)
+            guard let caminho = recuperaDiretorio() else { return }
+            try dados.write(to: caminho)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func recuperaDiretorio() -> URL? {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        return diretorio.appendingPathComponent("itens")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
