@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9EA5DD62252BAA65005F51BE /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5DD60252BAA65005F51BE /* AdicionarItensViewController.swift */; };
 		9EA5DD63252BAA65005F51BE /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5DD61252BAA65005F51BE /* AdicionarItensViewController.xib */; };
+		9EBF5FFB25307AE000FF9D92 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF5FFA25307AE000FF9D92 /* RefeicaoDao.swift */; };
 		9EC9B03E2523790A00D614F3 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B03D2523790A00D614F3 /* Refeicao.swift */; };
 		9EC9B0402523792800D614F3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9B03F2523792800D614F3 /* Item.swift */; };
 		9ED914A0252792A900F86B62 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9149F252792A900F86B62 /* RefeicoesTableViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		9EA5DD60252BAA65005F51BE /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
 		9EA5DD61252BAA65005F51BE /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
+		9EBF5FFA25307AE000FF9D92 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
 		9EC9B03D2523790A00D614F3 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		9EC9B03F2523792800D614F3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9ED9149F252792A900F86B62 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				9EC9B03D2523790A00D614F3 /* Refeicao.swift */,
 				9EC9B03F2523792800D614F3 /* Item.swift */,
 				9EDF7B0C252E3C9600FB3300 /* Alerta.swift */,
+				9EBF5FFA25307AE000FF9D92 /* RefeicaoDao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				9EC9B0402523792800D614F3 /* Item.swift in Sources */,
 				9EE7923E251A30CF00EE8B99 /* ViewController.swift in Sources */,
 				9EDF7B0F252E447E00FB3300 /* RemoveRefeicaoViewController.swift in Sources */,
+				9EBF5FFB25307AE000FF9D92 /* RefeicaoDao.swift in Sources */,
 				9EA5DD62252BAA65005F51BE /* AdicionarItensViewController.swift in Sources */,
 				9EE7923A251A30CE00EE8B99 /* AppDelegate.swift in Sources */,
 				9ED914A0252792A900F86B62 /* RefeicoesTableViewController.swift in Sources */,
